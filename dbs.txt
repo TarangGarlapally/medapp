@@ -1,0 +1,41 @@
+{
+
+     * --- Optional 
+    PG - private or Governement
+    'n'  as a prefix means  "no of "
+     
+    Hr - Health Rate 
+    Rp - recovery percentage 
+    Rexe - recommended excersice 
+  
+}
+
+Database :   MMapp 
+1. Users(  uid  ,  name , dob ,  *email , height , weight , Address , State , pincode) ; 
+2. Udoc( uid , did , issue) ; 
+2. Pincode(id ,  state , pincode) ; 
+3. Organisations( oid , State , pincode , Address , name, PG) ; 
+4.OrgsData( oid , year , ranking , npatients , nrecovery , ncases , ndoctors , branch) ; 
+{not needed for now 
+
+5.  OrgDocs( oid ,  doctype , ndocs , ncases , nrecovery ) ; 
+6. docs( oid , did , dname , dtype , dspecialization ); 
+7.  docsdata(curr_year , ncases , nrevcovery , status) ; 
+
+}
+
+7. Request( uid , type , status , dor{data of request} ) ;
+8.  prescription( pid , uid , oid ,name , age , height , weight , issue ) ; 
+9. plan(pid , Tname , Ttime , ntablets , comment) ; 
+10. Health( uid , curr_date , Hr , Rp  , Rexe) ;  
+
+Schema : 
+
+1.        Users  --- doctor                 
+ 	- single User   can have many docs considering the type of issue 
+2.      Users ---- prescription   
+	- single User can have many prescriptions 
+3 .      Doctors ---- prescription 
+	- single Doctor can create many prescription
+4.     Users - request 
+             1 : n '

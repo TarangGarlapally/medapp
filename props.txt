@@ -1,0 +1,38 @@
+USER PERSPECTIVE : 
+
+1.         user registration : 
+	this is the first page to appear in the App 
+	this page contains a simple User registration. 
+	it has a logo and Entries {username and Pass}  and  Signup/Signin  buttons 
+                        
+	** the User must Register with the Mobile number which is registered in the Recent hospital 
+	we just alert the User by saying that he would get the Request and able to select the hospital he's in through the Registered mobile Number
+2.     User and the Hospital Connectivity : 
+	Once the User gets registered he will 
+	be  having 2 options 
+                                    1.informed that the first visit in any hospital will 
+		be Linked to the User. 
+	            2. User will be able to accept the Request sent by the Hospitals. 
+3.    Digital Prescription : 
+	here we have considered a particular format for prescription and we store the data in the db accordingly. 
+	we need not take the basic attributes { name , age } as inputs we take Other attr like medicine name , nPills , weight, height {if weight and height 	are measured}. 
+	Each and every prescription has a uniq id and is linked to the User. 
+4.    Medication Plan : 
+	the Medication Plan contains Manily Three Stages { morning , afternoon , eve} 
+	so based on how the Latest prescription is Updated we decide the Medication Plan. 
+	and based on the issuse the User is facing with We recommend him doing excersice , recommend movies for metal growth. 
+5.  User Schemas : 
+	We maintain a list of  Schema that are or will be implemented by the Governement which are related to the paitients and 
+	apply them accordingly. 
+6. Health Rate : 
+	Based on the User Health { each month } we decide the Health Rate of the User 
+	{ here for now we are considering some basic attributes for the estimation of Health Rate 
+		i.e   body temp ,  basic{ cough , sneezes , allergy } } 
+	for now we are giving the credentials to the doctors the Update the data of the User but Our main goal is to link the 
+	machinery which automatically Updates the User's data.
+
+Doctor Registration : 
+{ I think for Now we are going to create a psuedo db that has set of Doctors{ not Organisations } and link the Users to Them }. 
+
+
+	 
