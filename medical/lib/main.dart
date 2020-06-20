@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:mmapp/analytics/analytics.dart';
+import 'package:mmapp/my_flutter_app_icons.dart';
+import  'my_flutter_app_icons.dart' ;
+import 'Plan/plan.dart';
 
 final Color darkBlue = Color.fromARGB(255, 18, 32, 47);
 
@@ -17,6 +22,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int bottomSelectedIndex = 0;
+  
 
   List<BottomNavigationBarItem> buildBottomNavBarItems() {
     return [
@@ -52,8 +58,8 @@ class _MyAppState extends State<MyApp> {
         pageChanged(index);
       },
       children: <Widget>[
-        Page1(),
-        Page2(),
+        plan(),
+        analytics(),
         SearchPage(),
         AppBody(),
       ],
@@ -112,33 +118,7 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class Page1 extends StatefulWidget {
-  @override
-  _Page1State createState() => _Page1State();
-}
 
-class _Page1State extends State<Page1> {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text("Page1"),
-    );
-  }
-}
-
-class Page2 extends StatefulWidget {
-  @override
-  _Page2State createState() => _Page2State();
-}
-
-class _Page2State extends State<Page2> {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text("Page2"),
-    );
-  }
-}
 
 class AppBody extends StatefulWidget {
   @override
